@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_head"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+
+        android:text="@string/main_head_text"
+        android:textColor="@color/black"
+    />
+
+    <EditText
+        android:id="@+id/min_value"
+        android:layout_below="@+id/main_head"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+
+        android:hint="@string/main_min_hint"
+
+        android:ems="10"
+        android:inputType="numberSigned"
+    />
+
+    <EditText
+        android:id="@+id/max_value"
+        android:layout_below="@+id/min_value"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:hint="@string/main_max_hint"
+
+        android:ems="10"
+        android:inputType="numberSigned"
+        />
+
+    <EditText
+        android:id="@+id/answer_value"
+        android:layout_below="@+id/max_value"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:hint="@string/main_answer_hint"
+
+        android:ems="10"
+        android:inputType="numberSigned"
+        />
+
+    <Button
+        android:id="@+id/main_button"
+        android:layout_below="@+id/max_value"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+
+        android:text="@string/main_button_text"
+    />
+
+    <TextView
+        android:id="@+id/main_last_res_text"
+        android:layout_below="@+id/main_button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+
+        android:text=""
+    />
+</RelativeLayout>

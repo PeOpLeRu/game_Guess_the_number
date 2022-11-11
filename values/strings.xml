@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="main_head_text">Введите диапазон:</string>
+    <string name="main_min_hint">Введите  min value</string>
+    <string name="main_max_hint">Введите max value</string>
+    <string name="main_answer_hint">Введите загаданное число</string>
+    <string name="main_button_text">Играть</string>
+    <string name="main_error_input_info_text">Незадан диапазон!</string>
+    <string name="main_error_input_answer_info_text">Число не соответсвует диапазону!</string>
+    <string name="main_win_info_text">последний раз была победа</string>
+    <string name="main_fail_info_text">последний раз было поражение</string>
+
+    <string name="play_question_text">Ваше число входит в диапазон </string>
+    <string name="play_win_text">Вы выиграли! Программа загадала: </string>
+    <string name="play_fail_text">Вы проиграли! Программа загадала: </string>
+    <string name="play_yes_text">Да</string>
+    <string name="play_no_text">Нет</string>
+    <string name="play_back_text">На главную</string>
+
+    <string name="author_text">by Sizyh Vlados aka MRX</string>
+</resources>
