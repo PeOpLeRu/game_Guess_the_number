@@ -1,0 +1,7 @@
+Добавил свойство в файл "build.gradle" внутрь свойства android {} :
+
+...
+    buildFeatures {
+        viewBinding = true
+    }
+...
