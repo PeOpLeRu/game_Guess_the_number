@@ -20,7 +20,10 @@ class PlayActivity : AppCompatActivity() {
         val num_player = intent.getIntExtra("answer", 45)
         var min_value = intent.getIntExtra("min", 0)
         var max_value = intent.getIntExtra("max", 100)
-        var avg = (max_value - min_value) / 2
+        var avg = (max_value + min_value) / 2
+
+       if (max_value - min_value % 2 != 0)
+            max_value += 1
 
         var end_game = false
         var player_is_win =  false
@@ -33,7 +36,7 @@ class PlayActivity : AppCompatActivity() {
         bindingClass.buttonYes.setOnClickListener(View.OnClickListener {
             if (!end_game)
             {
-                if (max_value - min_value <= 2)
+                if (avg - min_value <= 2)
                 {
                     end_game = true
                     bindingClass.buttonYes.visibility = View.INVISIBLE
@@ -56,7 +59,7 @@ class PlayActivity : AppCompatActivity() {
                 {
                     max_value = avg
                     avg = (max_value + min_value) / 2
-                    val temp = resources.getString(R.string.play_question_text) + "[$min_value, $avg] {$min_value, $avg, $max_value}?"
+                    val temp = resources.getString(R.string.play_question_text) + "[$min_value, $avg]?"
                     bindingClass.headTextQuest.text = temp
                 }
             }
@@ -65,12 +68,12 @@ class PlayActivity : AppCompatActivity() {
         bindingClass.buttonNo.setOnClickListener(View.OnClickListener {
             if (!end_game)
             {
-                if (max_value - min_value <= 2)
+                if (max_value - avg <= 2)
                 {
                     end_game = true
                     bindingClass.buttonYes.visibility = View.INVISIBLE
                     bindingClass.buttonNo.visibility = View.INVISIBLE
-                    val num = Random.nextInt(avg, max_value + 1)
+                    val num = Random.nextInt(avg + 1, max_value + 1)
 
                     if (num == num_player)
                     {
@@ -88,7 +91,7 @@ class PlayActivity : AppCompatActivity() {
                 {
                     min_value = avg
                     avg = (max_value + min_value) / 2
-                    val temp = resources.getString(R.string.play_question_text) + "[$min_value, $avg] {$min_value, $avg, $max_value}?"
+                    val temp = resources.getString(R.string.play_question_text) + "[$min_value, $avg]?"
                     bindingClass.headTextQuest.text = temp
                 }
             }
